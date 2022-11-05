@@ -3,11 +3,14 @@ import express from "express";
 import debugBuilder from "debug";
 import chalk from "chalk";
 import morgan from "morgan";
+import mongoose from "mongoose";
 
 const debug = debugBuilder("robots:server");
 const app = express();
 app.disable("x-powered-by");
 const port = process.env.PORT;
+
+await mongoose.connect(process.env.MONGO_URL);
 
 app.use(morgan("dev"));
 

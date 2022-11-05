@@ -18,6 +18,12 @@ module.exports = {
         "@typescript-eslint/no-empty-function": "off",
       },
     },
+    {
+      files: ["src/database/models/**/*.ts"],
+      rules: {
+        "@typescript-eslint/naming-convention": "off",
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: "latest",
