@@ -6,6 +6,7 @@ import morgan from "morgan";
 
 const debug = debugBuilder("robots:server");
 const app = express();
+app.disable("x-powered-by");
 const port = process.env.PORT;
 
 app.use(morgan("dev"));
@@ -15,5 +16,5 @@ app.use((req, res) => {
 });
 
 app.listen(port, () => {
-  debug(`server starter at: ${chalk.blueBright(`localhost:${port}`)}`);
+  debug(`server starter at: ${chalk.blueBright("localhost:", port)}`);
 });
