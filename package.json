@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/debug": "^4.1.7",
     "@types/express": "^4.17.14",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
@@ -32,6 +33,8 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "chalk": "^5.1.2",
+    "debug": "^4.3.4",
     "dotenv": "^16.0.3",
     "express": "^4.18.2"
   }
