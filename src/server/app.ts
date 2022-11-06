@@ -8,7 +8,7 @@ import routes from "./routes.js";
 const { getRobotsRoute } = routes;
 const app = express();
 app.disable("x-powered-by");
-app.use(cors);
+app.use(cors());
 
 app.use(morgan("dev"));
 
