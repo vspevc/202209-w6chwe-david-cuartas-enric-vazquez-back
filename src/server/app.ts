@@ -4,6 +4,7 @@ import cors from "cors";
 import getRobots from "./controllers/robotsControllers.js";
 import handleNotFound from "./middleware/handleNotFound/handleNotFound.js";
 import routes from "./routes.js";
+import getUser from "./controllers/userControllers.js";
 
 const { getRobotsRoute } = routes;
 const app = express();
@@ -12,6 +13,7 @@ app.use(cors());
 
 app.use(morgan("dev"));
 
+app.get("/login", getUser);
 app.get(getRobotsRoute, getRobots);
 
 app.use(handleNotFound);
