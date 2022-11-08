@@ -1,7 +1,7 @@
 import type { Response } from "express";
-import Robot from "../../database/models/Robot";
+import Robot from "../../database/models/Robot.js";
 import mocksRobots from "../../mocks/mocksRobots.js";
-import getRobots from "./robotsControllers.js";
+import { getRobots } from "./robotsControllers.js";
 
 const res: Partial<Response> = {
   status: jest.fn().mockReturnThis(),
